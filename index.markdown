@@ -5,6 +5,7 @@
 layout: home
 ---
 
+SITE IS BEING DEVELOPED.
 
 Sentence about the Cloudify 6G Project
 
