@@ -4,3 +4,20 @@
 
 layout: home
 ---
+
+
+Sentence about the Cloudify 6G Project
+
+
+# Project Overview
+
+
+## Goals
+
+
+## Research Questions
+
+
+# Collaborating Partners
+
+Additional information about the project [is available here](/about)
