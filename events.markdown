@@ -8,8 +8,11 @@ permalink: /events/
 
 <ul>
   {% for event in events %}
-    <li><a href="{{ event.url }}">{{ event.title }}</a></li>
-    <p> {{event.summary}} </p>
+    <div>
+    {{event.date  | date: '%B %d, %Y' }}<br/>
+    <a href="{{ event.url }}">{{ event.title }}</a><br/>
+    {{event.summary}}
+    </div>
   {% endfor %}
 </ul>
 

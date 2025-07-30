@@ -1,0 +1,1 @@
+wordcloud_cli --text cloudify.txt --imagefile wc.png --background white --colormap Set1

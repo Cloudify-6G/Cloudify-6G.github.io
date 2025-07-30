@@ -1,0 +1,11 @@
+Cloudify-6G
+RAN
+OpenRAN
+Radio
+Cloud
+AI
+ML
+Microservices
+Seamless
+Efficient
+Performance
