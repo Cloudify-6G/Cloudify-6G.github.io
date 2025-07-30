@@ -34,11 +34,11 @@ plugins:
   - jekyll-feed
 
 collections:
-  news:
+  events:
     output: true
   team:
-    output: true
-
+    output: true  
+    
 sass:
   sass_dir: _sass
 # Exclude from processing.

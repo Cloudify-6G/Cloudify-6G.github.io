@@ -1,13 +1,12 @@
 ---
 layout: team_member
-identifier: tao
-title: Tao Chen
+identifier: henri
+title: Henri Blue
 organization: vtt
-img: tao.jpg
+img: henri.jpg
 organization_full: VTT Technical Research Centre of Finland
-role: Principal Investigator
+role: Research Trainee
 bio_brief: |
-  Placeholder
+  Placeholder.
+bio_full: None
 ---
-
-Hello

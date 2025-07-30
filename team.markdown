@@ -2,20 +2,19 @@
 layout: page
 title: Team
 permalink: /team/
-sort_order: ["tao", "sasu", "riku", "jp", "alexis", "yongchao", "ashwin"]
+sort_order: ["tao", "sasu", "riku", "jp", "alexis", "ashwin", "henri", "yongchao", "amy"]
 past_order: ["joonas", yangli", "xinyang"]
 ---
 
 <style>
 .image-cell {
-    width: 20%;
+    width: 30%;
 }
-.text-cell {
-    width: 80%;
-}
+
 img {
-    max-width: 100%; /* Ensures the image is responsive */
+    max-width: 60%; /* Ensures the image is responsive */
     height: auto; /* Maintains aspect ratio */
+    object-fit: contain; /* or cover */
 }
 </style>
 
@@ -48,40 +47,29 @@ img {
 
 <div id="team-members">
     {% assign ordered_members = "" | split: "" %}  <!-- Initialize an empty array -->
-    {% for identifier in page.sort_order %}
+    {% for identifier in page.sort_order %} <!-- Add member to the array -->
         {% assign member = site.team | where: "identifier", identifier | first %}
         {% if member %}
-            {% assign ordered_members = ordered_members | push: member %}  <!-- Add member to the array -->
+            {% assign ordered_members = ordered_members | push: member %}  
         {% endif %}
     {% endfor %}
-    
     <table>
-    {% for member in ordered_members %}
-    <tr>
-        <div class="team-member" data-org="{{ member.organization }}" data-org-name="{{ member.organization_full}}" >
+        <tr>
+        {% for member in ordered_members %}
+        {% assign loopindex = forloop.index | modulo: 3 %}
+        {% if loopindex == 1 %}
+        </tr>
+        <tr>
+        {% endif %}
             <td class="image-cell"> 
                 <img class="member-image" src="{{ member.img | prepend: '/team/' }}" alt="{{ member.title }}">
+                <h4><a href="{{ member.url }}">{{ member.title }}</a></h4> 
+                <p> {{ member.role }}, <br/> {{ member.organization_full}}</p>
             </td>
-            <td class="text-cell">    
-            <div class="member-details">
-                <h3><a href="{{ member.url }}">{{ member.title }}</a></h3> 
-                <p> {{ member.role }}, {{ member.organization_full}}</p>
-                <p> {{member.bio_brief}} </p>
-            </div>
-            </td> 
-        </div>
-    </tr>    
-    {% endfor %}
+        {% endfor %}
+        </tr>            
     </table>
 </div>
-<!-- <h2>All Team Members</h2>
-<ul>
-    {% for member in site.team %}
-        <li>{{member.identifier}} - {{ member.title }} - {{ member.organization_full }}</li>
-    {% endfor %}
-</ul> -->
-
-
 
 <!-- <h2>All Team Members</h2>
 <ul>
@@ -89,6 +77,3 @@ img {
         <li>{{member.identifier}} - {{ member.title }} - {{ member.organization_full }}</li>
     {% endfor %}
 </ul> -->
-
-
-
