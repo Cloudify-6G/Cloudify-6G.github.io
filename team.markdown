@@ -11,10 +11,19 @@ past_order: ["joonas", yangli", "xinyang"]
     width: 30%;
 }
 
-img {
-    max-width: 60%; /* Ensures the image is responsive */
-    height: auto; /* Maintains aspect ratio */
-    object-fit: contain; /* or cover */
+.member-image {
+    max-width: 100%; /* Ensures the image is responsive */
+    height: 150px;
+    width: auto; /* Maintain aspect ratio */   
+    padding: 0px; 
+    bottom: 0;
+    object-fit: cover; /* or cover */
+    vertical-align: bottom;
+}
+
+.team-member {
+    display: flex;
+    align-items: flex-end; /* Align text at the bottom of image */
 }
 </style>
 
@@ -64,7 +73,7 @@ img {
             <td class="image-cell"> 
                 <img class="member-image" src="{{ member.img | prepend: '/team/' }}" alt="{{ member.title }}">
                 <h4><a href="{{ member.url }}">{{ member.title }}</a></h4> 
-                <p> {{ member.role }}, <br/> {{ member.organization_full}}</p>
+                <p> {{ member.role }}, <br/> <em>{{ member.organization_full}}</em> </p>
             </td>
         {% endfor %}
         </tr>            
