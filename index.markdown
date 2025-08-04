@@ -4,6 +4,7 @@
 
 layout: home
 ---
+**SITE IS UNDER DEVELOPMENT**
 
 The Cloudify-6G project aims to advance the integration of cloud technology with mobile networks as the industry transitions from 5G to 6G. 
 It seeks to create flexible and efficient connectivity solutions by focusing on developing next-generation radio access networks that leverage a common AI/ML platform for implementing algorithms. 

@@ -2,7 +2,7 @@
 layout: page
 title: Team
 permalink: /team/
-sort_order: ["tao", "sasu", "riku", "jp", "alexis", "ashwin", "henri", "yongchao", "amy"]
+sort_order: ["tao", "riku", "sasu", "jp", "alexis", "ashwin", "henri", "yongchao", "amy"]
 past_order: ["joonas", yangli", "xinyang"]
 ---
 
