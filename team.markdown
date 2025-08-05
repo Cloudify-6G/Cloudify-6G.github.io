@@ -7,6 +7,12 @@ past_order: ["joonas", yangli", "xinyang"]
 ---
 
 <style>
+
+.team-members {
+    display: flex;
+    align-items: flex-end; /* Align text at the bottom of image */
+}
+
 .image-cell {
     width: 30%;
 }
@@ -20,35 +26,10 @@ past_order: ["joonas", yangli", "xinyang"]
     object-fit: cover; /* or cover */
     vertical-align: bottom;
 }
-
-.team-member {
-    display: flex;
-    align-items: flex-end; /* Align text at the bottom of image */
+.member-info {
+    vertical-align: bottom;
 }
 </style>
-
-<script>
-    function filterTeam(org) {
-        console.log("Filtering Organization", org);
-        const members = document.querySelectorAll('.team-member');
-        console.log("Total members found:", members.length);
-
-        members.forEach(member => {
-            console.log("Checking member:", member.querySelector('h3').innerText); 
-            if (org === 'all' || member.getAttribute('data-org') === org) {
-                member.style.display = 'block';
-                console.log("Showing member");
-            } else {
-                member.style.display = 'none';
-                console.log("Hiding member");
-            }
-        });
-    }
-
-    document.addEventListener("DOMContentLoaded", function() {
-        filterTeam('all');
-    });
-</script>
 
 <h2>Our Team</h2>
 
@@ -70,9 +51,9 @@ past_order: ["joonas", yangli", "xinyang"]
         </tr>
         <tr>
         {% endif %}
-            <td class="image-cell"> 
-                <img class="member-image" src="{{ member.img | prepend: '/team/' }}" alt="{{ member.title }}">
-                <h4><a href="{{ member.url }}">{{ member.title }}</a></h4> 
+            <td class="image-cell">
+                <img class="member-image" src="{{ member.img | prepend: '/team/' }}" alt="{{ member.title }}"><br/>
+                <a href="{{ member.url }}">{{ member.title }}</a> 
                 <p> {{ member.role }}, <br/> <em>{{ member.organization_full}}</em> </p>
             </td>
         {% endfor %}
