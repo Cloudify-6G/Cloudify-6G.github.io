@@ -6,7 +6,10 @@ permalink: /publications/
 
 # Journal Articles
 
+
 # Conference Articles
+
+1. Chen Xinyang, Yasith Ruwanga Wanigarathna Wanigarathna Arachchige, Arnab Chattopadhyay, Sasu Tarkoma, and Ashwin Rao. [**"A Pedagogical Approach For Evaluating AIOps**](https://researchportal.helsinki.fi/files/756857236/LLM_Kubernetes_Paper.pdf)." In AIMLSystems 2025: The 5th International Conference on AI-ML Systems. 2025.
 
 # Thesis
 
